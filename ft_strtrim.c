@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_luv_me(const char *s1, const char *set)
+int		operation1(const char *s1, const char *set)
 {
 	int		n;
 	int		i;
@@ -41,7 +41,7 @@ int		ft_luv_me(const char *s1, const char *set)
 	return (0);
 }
 
-int		ft_no_luv_me(const char *s1, const char *set)
+int		operation2(const char *s1, const char *set)
 {
 	int		n;
 	int		i;
@@ -80,8 +80,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!(s1 && set))
 		return (NULL);
-	n = ft_luv_me(s1, set);
-	i = ft_no_luv_me(s1, set);
+	n = operation1(s1, set);
+	i = operation2(s1, set);
 	j = (i - n) + 1;
 	x = 0;
 	if (!(res = (char*)malloc(sizeof(char) * (j + 1))))
